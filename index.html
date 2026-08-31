@@ -1,114 +1,145 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lovagok Pet Gyűjtemény</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lovagok Pet Gyűjtemény</title>
 
-    <script/cdn.tailwindcss.comscript>
+<style>
+body{
+    margin:0;
+    background:#090909;
+    color:white;
+    font-family:Arial, sans-serif;
+}
+
+header{
+    background:black;
+    border-bottom:2px solid #d4af37;
+    padding:20px;
+}
+
+h1{
+    color:#d4af37;
+    margin:0;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:15px;
+}
+
+.card{
+    background:#151515;
+    padding:20px;
+    border-radius:10px;
+}
+
+.pets{
+    margin-top:30px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.pet{
+    background:#151515;
+    border:1px solid #d4af37;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.pet img{
+    width:100%;
+    display:block;
+}
+
+.pet h3{
+    padding:15px;
+    margin:0;
+}
+
+.have{
+    background:#15803d;
+    padding:10px;
+    text-align:center;
+}
+
+.missing{
+    background:#991b1b;
+    padding:10px;
+    text-align:center;
+}
+</style>
+
 </head>
+<body>
 
-<body class="bg-zinc-950 text-white min-h-screen">
+<header>
+    <h1>LOVAGOK</h1>
+    <p>PET GYŰJTEMÉNY</p>
+</header>
 
-    <header class="bg-black border-b border-yellow-600">
-        <div class="max-w-7xl mx-auto px-6 py-6">
-            <h1 class="text-5xl font-bold text-yellow-500">
-                LOVAGOK
-            </h1>
-            <p class="text-yellow-300">
-                PET GYŰJTEMÉNY
-            </p>
-        </div>
-    </header>
+<div class="container">
 
-    <main class="max-w-7xl mx-auto p-6">
-
-        <div class="grid md:grid-cols-4 gap-4 mb-8">
-
-            <div class="bg-zinc-900 rounded-xl p-5">
-                <p class="text-gray-400">Összes Pet</p>
-                <h2 class="text-4xl font-bold text-yellow-500">100</h2>
-            </div>
-
-            <div class="bg-zinc-900 rounded-xl p-5">
-                <p class="text-gray-400">Megvan</p>
-                <h2 class="text-4xl font-bold text-green-500">42</h2>
-            </div>
-
-            <div class="bg-zinc-900 rounded-xl p-5">
-                <p class="text-gray-400">Hiányzik</p>
-                <h2 class="text-4xl font-bold text-red-500">58</h2>
-            </div>
-
-            <div class="bg-zinc-900 rounded-xl p-5">
-                <p class="text-gray-400">Teljesítés</p>
-                <h2 class="text-4xl font-bold text-yellow-500">42%</h2>
-            </div>
-
+    <div class="stats">
+        <div class="card">
+            <h3>Összes Pet</h3>
+            <h2>100</h2>
         </div>
 
-        <h2 class="text-2xl font-bold mb-4 text-yellow-500">
-            Petek
-        </h2>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-            <div class="bg-zinc-900 rounded-xl overflow-hidden border border-yellow-700">
-                <img
-                    src="https://placehold.co/300x220/1f1f1f/ffaa00?text=Mini+Sarkany"
-                    alt <h3 class="font-bold text-lg">
-                        Mini Sárkány
-                    </h3>
-                </div>
-
-                <div class="bg-red-800 text-center p-3">
-                    Hiányzik
-                </div>
-            </div>
-
-            <div class="bg-zinc-900 rounded-xl overflow-hidden border border-yellow-700">
-                <img
-                    src="https://placehold.co/300x220/1f1f1f/00ff66?text=Mini+Tigris"
-                    alt="Mini Tigris"
-     d text-lg">
-                        Mini Tigris
-                    </h3>
-                </div>
-
-                <div class="bg-green-800 text-center p-3">
-                    Megvan
-                </div>
-            </div>
-
-            <div class="bg-zinc-900 rounded-xl overflow-hidden border border-yellow-700">
-                <img
-                    src="https://placehold.co/300x220/1f1f1f/4da6ff?text=Mini+Farkas"
-                    alt="Mini Farkasont-bold text-lg">
-                        Mini Farkas
-                    </h3>
-                </div>
-
-                <div class="bg-green-800 text-center p-3">
-                    Megvan
-                </div>
-            </div>
-
-            <div class="bg-zinc-900 rounded-xl overflow-hidden border border-yellow-700">
-                <img
-                    src="https://placehold.co/300x220/1f1f1f/ff4444?text=Mini+Oroszlan"
-                    alt <h3 class="font-bold text-lg">
-                        Mini Oroszlán
-                    </h3>
-                </div>
-
-                <div class="bg-red-800 text-center p-3">
-                    Hiányzik
-                </div>
-            </div>
-
+        <div class="card">
+            <h3>Megvan</h3>
+            <h2 style="color:#22c55e;">42</h2>
         </div>
 
-    </main>
+        <div class="card">
+            <h3>Hiányzik</h3>
+            <h2 style="color:#ef4444;">58</h2>
+        </div>
+
+        <div class="card">
+            <h3>Teljesítés</h3>
+            <h2 style="color:#d4af37;">42%</h2>
+        </div>
+    </div>
+
+    <div class="pets">
+
+        <div class="pet">
+            <img src="https://placehold.co/300x220/222222/ffaa00?text=Mini+Sarkany">
+            <h3>Mini Sárkány</h3>
+            <div class="missing">Hiányzik</div>
+        </div>
+
+        <div class="pet">
+            <img src="https://placehold.co/300x220/222222/00ff66?text=Mini+Tigris">
+            <h3>Mini Tigris</h3>
+            <div class="have">Megvan</div>
+        </div>
+
+        <div class="pet">
+            <img src="https://placehold.co/300x220/222222/4da6ff?text=Mini+Farkas">
+            <h3>Mini Farkas</h3>
+            <div class="have">Megvan</div>
+        </div>
+
+        <div class="pet">
+            <img src="https://placehold.co/300x220/222222/ff4444?text=Mini+Oroszlan">
+            <h3>Mini Oroszlán</h3>
+            <div class="missing">Hiányzik</div>
+        </div>
+
+    </div>
+
+</div>
 
 </body>
 </html>
